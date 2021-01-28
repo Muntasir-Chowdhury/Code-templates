@@ -5,10 +5,10 @@ const int N = 1e7 + 9, M = 5e5 + 9;
 
 int spf[N];///smallest prime factor
 vector<int> prime;
-int pr[N];
+bool pr[N];
 void linear_sieve() {
     for(int i=2;i<N;i++){
-        if(spf[i]==0) spf[i]=i,pr[i]=1,prime.push_back(i);
+        if(spf[i]==0) spf[i]=i,pr[i]=true,prime.push_back(i);
         int sz=prime.size();
         for(int j=0;j<sz&&i*prime[j]<N&&prime[j]<=spf[i];j++) spf[i*prime[j]]=prime[j];
     }
