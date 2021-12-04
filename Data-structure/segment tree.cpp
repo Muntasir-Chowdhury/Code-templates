@@ -56,7 +56,7 @@ int main()
 
     init(1, 1, n);
 
-    update(1, 1, n, 2, 0);
+    //update(1, 1, n, 2, 0);
     cout << query(1, 1, n, 1, 3) << endl;
     update(1, 1, n, 2, 2);
     cout << query(1, 1, n, 2, 2) << endl;
